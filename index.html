@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
+    <title>Portafolio Brisa</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700,800,900&subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de que 'style.css' esté en el mismo directorio -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para ocultar el texto inicialmente */
+        .hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <div class="menu" id="menu">
-        <ul> <!-- Añade un <ul> para estructurar la lista -->
-            <li><a href="#">ACCUEIL</a></li>
-            <li><a href="#">ABOUT ME</a></li>
-            <li><a href="#">MY WORKS</a></li>
-            <li><a href="#">CONTACT ME</a></li>
-        </ul>
+    <div class="menu">
+        <div class="menu-item">
+            <span class="btn">Sobre mi</span>
+        </div>
+        <div class="menu-item">
+            <span class="btn">Obra</span>
+        </div>
+        <div class="menu-item">
+            <span class="btn">Contacto</span>
+        </div>
     </div>
+
     <div class="container gradient-purple-blue">
         <div class="under-container bubble" style="height:90vh;">
             <div class="line">
@@ -35,13 +53,38 @@
                 <div class="square">a</div>
             </div>
         </div>
-        <div class="under-container" style="height:10vh">
-            <div class="mouse">
-                <div class="molette"></div>
+    </div>
+
+    <div class="container" id="secondcontainer">
+        <div class="under-container">
+            <div class="perfil">
+                <img src="yo mediana.jpg" alt="Perfil">
             </div>
         </div>
     </div>
-    <div class="container" id="secondcontainer">
-        <div class="under-container">
-            <div class="profil-picture" id="profilpicture">
-                <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/42359178_2096194380400598_
+    
+    <br>
+    
+    <div class="has-animation animation-ltr" data-delay="1500">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+             minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+               esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+    
+    <br>
+    
+    <script>
+        $(document).ready(function() {
+            $('.has-animation').each(function(index) {
+                $(this).delay($(this).data('delay')).queue(function() {
+                    $(this).addClass('animate-in');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
