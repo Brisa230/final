@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #999;
+    background-image: linear-gradient(30deg, #b8dffd, #f4b7fa);
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin: 20px auto 50px auto;
+    box-shadow: 0 0 30px #000;
+    background-color: rgba(212, 172, 221, 0.601); 
+    background-image: url(https://png.pngtree.com/png-clipart/20231020/original/pngtree-stars-and-golden-stardust-effects-png-image_13375520.png); 
+    background-clip: cover;
+    background-position: left top, 0 0;
+    background-repeat: no-repeat;
+}
+
+.main {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    background-image: url(yo\ mediana.jpg);
+    background-clip: cover;
+    background-position: -10px -0px; 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 800px;
+    height: 700px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 5em;
+    position: absolute;
+    left: 250px;
+    bottom: 100px;
+    line-height: .9em;
+}
+
+.desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 300px;
+    height: 57.5%;
+    text-align: left;
+    box-sizing: border-box;
+    background-image: none; 
+}
+
+.padding-left { padding-left: 50px; }
+
+.desc h1 {
+    color: #000;
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 1.5em;
+}
